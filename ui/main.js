@@ -17,31 +17,7 @@ button.onclick = function() {
         // Not done yet - req phase
         request.open('GET', 'http://ritukashyap212.imad.hasura-app.io/counter',true);
         request.send(null);
-
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
