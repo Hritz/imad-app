@@ -14,45 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles ={
-  'article-one'  :{ title:'One | Ritu Kashyap',
-    heading:'Article One',
-    date:'August 15, 2017',
-    content:` <p>
-                    Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!
-                </p>
-            </div>
-             <div>
-                <p>
-                    Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!
-                </p>
-            </div>
-             <div>
-                <p>
-                    Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!Something is going to show up here soon, Relax!
-                </p>`},
-  
-  'article-two' :{ title:'Two | Ritu Kashyap',
-    heading:'Article Two',
-    date:'August 18, 2017',
-    content:`<div>
-                <p>
-                   Sit back bitches!
-                </p>
-            </div>`},
-  
-  'article-three' :{title:'Three | Ritu Kashyap',
-    heading:'Article Three',
-    date:'August 20, 2017',
-    content:`<div>
-                <p>
-                   How many times do i have to try?!
-                </p>
-            </div>`}
-};
-
-
-
 function createTemplate(data){
     var heading = data.heading;
     var title = data.title;
