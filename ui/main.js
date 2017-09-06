@@ -50,6 +50,7 @@ var submit = document.getElementById('submit_btn');
         console.log(username);
         console.log(password);
         request.open('POST', 'http://ritukashyap212.imad.hasura-app.io/login', true);
+        request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({username: username, password: password}));
         
         //make a request to the server annd send the names 
