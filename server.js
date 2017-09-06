@@ -56,30 +56,21 @@ function createTemplate(data){
 }
 
 
-
-
-
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-function hash(input) {
+function hash(input, salt) {
     //how do we create a hash?
-    var hashed = crypto.pbkdf2sync(input);
-    return hashed.toString('hex');
+    var hashed = crypto.pbkdf2sync(input, salt, 1000, 512, 'sha512');
+    return ["pbkdf2","1000", salt, hashed.toString('hex')].join('$');
 }
 
 
-
 app.get('/hash/:input', function(req, res) {
-    var hashedString = hash(req.param.input);
+    var hashedString = hash(req.param.input, 'this-is-salt');
     res.send(hashedString);
 });
-
-
-
-
 
 
 var pool = new Pool(config);
