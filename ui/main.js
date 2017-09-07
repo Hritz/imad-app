@@ -42,6 +42,7 @@ var submit = document.getElementById('submit_btn');
                  alert('something went wrong on the server.');
             }
          // Not done yet - req phase
+        }
     };
        
         // submit names
